@@ -123,12 +123,7 @@ void settingsRestoreDefaultSettings(void)
 	nonVolatileSettings.currentZone = 0;
 	nonVolatileSettings.backlightMode = BACKLIGHT_MODE_AUTO;
 	nonVolatileSettings.backLightTimeout = 0;//0 = never timeout. 1 - 255 time in seconds
-	nonVolatileSettings.displayContrast =
-#if defined(PLATFORM_DM1801)
-			0x0e; // 14
-#else
-			0x12; // 18
-#endif
+	nonVolatileSettings.displayContrast = 0x12;
 	nonVolatileSettings.initialMenuNumber=MENU_VFO_MODE;
 	nonVolatileSettings.displayBacklightPercentage=100U;// 100% brightness
 	nonVolatileSettings.displayBacklightPercentageOff=0U;// 0% brightness
